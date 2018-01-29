@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+	<script src="{% static 'checktendies/js/confetti.js' %}"></script>
+{% endblock header %}
+
+{% block content %}
+	{% if tendiestoday %}
+		<canvas id="confetti"></canvas>
+		<button class="btn btn-outline-primary " id="confetti_toggle">Toggle Confetti</button>
+		<div class="container">
+			<div class= "jumbotron myJumbotron text-center">
+				<h1>There are tendies today at {{ tendiestoday }}!</h1>
+		</div>
+		</div>
+		<div class="row">
+			<div class="container">
+				<img src="{% static 'checktendies/tenders.png' %}" class="img center-block img-responsive" alt="Some Chicken Tenders">
+			</div>
+		</div>
+
+	{% else %}
+		<div class= "jumbotron myJumbotron text-center">
+			<h1>There are no tendies today!*</h1>
+		</div>
+		<div class="row">
+			<div class="container">
+				<img src="{% static 'checktendies/chicken.png' %}" class="center-block img-responsive" alt="A Live Chicken">
+			</div>
+		</div>
+		<div class="row">
+			<div class="container text-center">
+				<h2>*The menu may not be up.</h2>
+			</div>
+		</div>
+	{% endif %}
+{% endblock content %}
