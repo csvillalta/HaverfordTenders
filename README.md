@@ -4,7 +4,7 @@ This project is simply to familiarize myself with Django and Bootstrap. Many fea
 
 **Note:** I have not included the settings.py file for this Django project as I may later experiment with databases.
 
-## Current TODO (in no particular order)##
+## Current TODO (in no particular order)
 * Add a footer with information
 * Make everything fit nicely on one page
 * Add an about page
