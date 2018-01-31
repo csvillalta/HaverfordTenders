@@ -6,6 +6,24 @@
 {% endblock header %}
 
 {% block content %}
+	{% if submitted_phone %}
+		<div class="container">
+			<div class="row">
+				<p>Thank you for submitting!</p>
+			</div>
+		</div>
+	{% else %}
+		<div class="container">
+			<div class="row">
+				<form method="post">
+					{% csrf_token %}
+					{{ phone_form.as_p }}
+					<input type="submit" value="Submit" />
+				</form>
+			</div>
+		</div>
+	{% endif %}
+
 	{% if tendiestoday %}
 		<canvas id="confetti"></canvas>
 		<button class="btn btn-outline-primary " id="confetti_toggle">Toggle Confetti</button>
@@ -13,6 +31,7 @@
 			<div class= "jumbotron myJumbotron text-center">
 				<h1>There are tendies today at {{ tendiestoday }}!</h1>
 		</div>
+
 		</div>
 		<div class="row">
 			<div class="container">
@@ -35,4 +54,5 @@
 			</div>
 		</div>
 	{% endif %}
+
 {% endblock content %}

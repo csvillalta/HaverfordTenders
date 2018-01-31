@@ -14,7 +14,7 @@ def checktendies():
 	for item in menus[:menu_num]:
 		entries = item.select('span')
 		for entry in entries:
-			if "ice cream sundae bardaf" == entry.getText().lower():
+			if "spring roll bowl" == entry.getText().lower(): # this should check for 'chicken breast tenderloins', but for testing purposes I often change the value
 				return item.h4.getText().lower()
 	return False
 
