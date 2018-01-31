@@ -4,6 +4,12 @@ This project is simply to familiarize myself with Django and Bootstrap. Many fea
 
 **Note:** I have not included the settings.py file for this Django project as I may later experiment with databases.
 
+## Currently Implementing
+* Modifying phone form
+  * Need to add further error checking (i.e. no repeated phone numbers)
+  * Use messages framework to display a success message between requests
+  * Need to beautify using Bootstrap
+
 ## Current TODO (in no particular order)
 * Add a footer with information
 * Add database and SMS capabilities using twilio
