@@ -12,9 +12,9 @@ def checktendies():
 	if datetime.datetime.today().weekday() == 6:
 		menu_num = 2
 	for item in menus[:menu_num]:
-		entries = item.select('span')
+		entries = item.select('p')
 		for entry in entries:
-			if "spring roll bowl" == entry.getText().lower(): # this should check for 'chicken breast tenderloins', but for testing purposes I often change the value
+			if "tenderloins" in entry.getText().lower(): # this should check for 'chicken breast tenderloins', but for testing purposes I often change the value
 				return item.h4.getText().lower()
 	return False
 
